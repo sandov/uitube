@@ -1,3 +1,3 @@
 # uitube
-Make new Youtube's UI slightly more bearable. 
+Make Youtube's new UI slightly more bearable. 
 
