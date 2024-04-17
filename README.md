@@ -1,2 +1,3 @@
 # uitube
-Fix Youtube's atrocious new UI
+Make new Youtube's UI slightly more bearable. 
+

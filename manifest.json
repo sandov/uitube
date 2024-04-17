@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "uitube",
+    "version": "0.0.1",
+
+    "description": "Make Youtube's terrible new UI slightly less bad",
+
+    "icons":{
+    	"48": "icons/uitube-48.png",
+        "96": "icons/uitube-96.png"
+    },
+
+    "content_scripts":[
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["uitube.js"]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "__uitube@diegosandoval.net"
+		}
+    }
+}
