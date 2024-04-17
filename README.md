@@ -1,5 +1,5 @@
 # uitube
-Make Youtube's new UI slightly more bearable. 
+A Firefox extension to make Youtube's new UI slightly more bearable. 
 
 ## Before:
 
