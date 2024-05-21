@@ -46,6 +46,7 @@ function addCommentsToggleListener() {
     let comments_title_element = document.querySelector(comments_title_selector);
     if (comments_title_element) {
         comments_title_element.addEventListener('click', toggle_comments_visibility);
+        observer.disconnect();
     }
 }
 
