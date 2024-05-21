@@ -9,11 +9,11 @@ uitube can be installed from [Mozilla Add-ons for Firefox](https://addons.mozill
 
 Youtube's UI showing huge recommendation thumbnails while you're trying to watch a video:
 
-![Youtube's UI showing big recommendation thumbnails while you're trying to watch a video'](./public/scs_2.png)
+![Youtube's UI showing big recommendation thumbnails while you're trying to watch a video'](./public/may_before.png)
 
 ## After:
 
-Recommendations are not visible unless you scroll down. Comments not visible unless you click on "Expand":
+Recommendations are not visible unless you scroll down.
 
-!['Recommendations are not visible unless you scroll down. Comments not visible unless you click on "Expand"'](./public/scs_1.png)
+!['Recommendations are not visible unless you scroll down.'](./public/may_after.png)
 
