@@ -29,12 +29,14 @@ var see_comments = true;
 
 var comments_title_selector = ".ytd-comments-header-renderer .count-text";
 
+const hide_comments_element = document.createTextNode(hide_comments_rule)
+
 function toggle_comments_visibility() {
     if (see_comments){
-        style.appendChild(document.createTextNode(hide_comments_rule));
+        style.appendChild(hide_comments_element);
     }
     else {
-        style.appendChild(document.createTextNode(show_comments_rule));
+        style.removeChild(hide_comments_element);
     }
     see_comments = !see_comments;
 }
