@@ -16,6 +16,9 @@ style.appendChild(document.createTextNode(recommendations_rule));
 const comments_default_selector = "html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-grid.style-scope.ytd-page-manager.hide-skeleton div#fixed-columns-secondary.style-scope.ytd-watch-grid div#secondary.style-scope.ytd-watch-grid div#secondary-inner.style-scope.ytd-watch-grid ytd-comments#comments.style-scope.ytd-watch-grid ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer"
 const vis_hidden_declaration = "{visibility: hidden;}";
 const hide_comments_rule = comments_default_selector + " " + vis_hidden_declaration;
-style.appendChild(document.createTextNode(hide_comments_rule));
+const hide_comments_element = document.createTextNode(hide_comments_rule);
+style.appendChild(hide_comments_element);
 
 document.head.appendChild(style);
+
+
