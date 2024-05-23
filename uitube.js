@@ -1,10 +1,10 @@
 // Create style element where we'll add our custom CSS rules
 let style = document.createElement('style');
 
-// Define CSS rule to move recommendations 25vh units down:
+// Define CSS rule to move recommendations 30vh units down:
 const recommendations_selector = 'div#bottom-grid.style-scope.ytd-watch-grid ytd-rich-grid-renderer.style-scope.ytd-watch-grid div#contents.style-scope.ytd-rich-grid-renderer';
 
-const recommendations_declaration = "{margin-top: 25vh;}";
+const recommendations_declaration = "{margin-top: 30vh;}";
 
 const recommendations_rule = recommendations_selector + " " + recommendations_declaration;
 
@@ -21,4 +21,43 @@ style.appendChild(hide_comments_element);
 
 document.head.appendChild(style);
 
+// Toggle comment visibility:
+var see_comments = false;
+var comments_title_selector = ".ytd-comments-header-renderer .count-text";
+
+function toggle_comments_visibility() {
+    see_comments = !see_comments;
+    if (see_comments){
+        style.removeChild(hide_comments_element);
+    }
+    else {
+        style.appendChild(hide_comments_element);
+    }
+}
+
+// Function to add the event listener once the element exists
+function addCommentsToggleListener() {
+    let comments_title_element = document.querySelector(comments_title_selector);
+    if (comments_title_element) {
+        comments_title_element.addEventListener('click', toggle_comments_visibility);
+    }
+}
+
+// Create a MutationObserver to watch for changes in the DOM
+const observer = new MutationObserver((mutations) => {
+    for (let mutation of mutations) {
+        if (mutation.type === 'childList') {
+            addCommentsToggleListener();
+        }
+    }
+});
+
+// Start observing the document body for changes
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+// Initial call to add the event listener if the element already exists
+addCommentsToggleListener();
 
