@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "uitube",
-    "version": "2024.5.22.1",
+    "version": "2024.5.23.1",
 
     "description": "Make Youtube's terrible new UI slightly less bad",
 
